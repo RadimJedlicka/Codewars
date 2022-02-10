@@ -45,3 +45,62 @@ def odd_or_even(arr: list) -> str:
 
 print(f'ODD or EVEN: {odd_or_even([1,2,3,1])}')
 # ------------------------------------
+
+# Complete the solution so that it reverses the string passed into it.
+# 'world'  =>  'dlrow'          # 'word'   =>  'drow'
+
+
+def solution(string: str) -> str:
+    return string[::-1]
+
+
+print(f'Reversed string: {solution("ahoj")}')
+# ------------------------------------
+
+# Write a program that finds the summation of every number from 1 to num.
+# The number will always be a positive integer greater than 0.
+
+# For example:
+# summation(2) -> 3         # summation(8) -> 36
+# 1 + 2                     # 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+
+def summation(num):
+    result = 0
+    for number in range(num + 1):
+        result += number
+    return result
+# or return sum(range(num + 1))
+
+
+print(f'Summation: {summation(8)}')
+# ------------------------------------
+
+# Can you find the needle in the haystack?
+# Write a function findNeedle() that takes an array full of junk but containing one "needle"
+# After your function finds the needle it should return a message (as a string) that says:
+# "found the needle at position " plus the index it found the needle, so:
+
+
+def find_needle(haystack: list) -> str:
+    index = haystack.index('needle')
+    return f'found the needle at position {index}'
+
+
+print(find_needle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
+# ------------------------------------
+
+# Complete the square sum function so that it squares each number passed into it and then sums the results together.
+# For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+
+def square_sum(numbers):
+    # result = 0
+    # for number in numbers:
+    #     result += number**2
+    # return result
+    return sum(number**2 for number in numbers)
+
+
+print(f'Square_Sum: {square_sum([1, 2, 2])}')
+# ------------------------------------

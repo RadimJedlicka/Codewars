@@ -104,3 +104,33 @@ def square_sum(numbers):
 
 print(f'Square_Sum: {square_sum([1, 2, 2])}')
 # ------------------------------------
+
+# Complete the solution so that it returns true if the first argument(string)
+# passed in ends with the 2nd argument (also a string).
+# Examples:
+# solution('abc', 'bc') # returns true
+# solution('abc', 'd') # returns false
+
+
+def solution(string, ending):
+    return True if string.endswith(ending) else False
+
+
+print(f"Solution: {solution('hello', 'llo')}")
+# ------------------------------------
+
+# Write an algorithm that takes an array and moves all of the zeros to the end,
+# preserving the order of the other elements.
+
+# move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]
+
+
+def move_zeros(array):
+    for number in array:
+        if number == 0:
+            array.remove(number)
+            array.insert(len(array), number)
+    return array
+
+
+print(f"Move Zeros: {move_zeros([1, 0, 1, 2, 0, 1, 453])}")
